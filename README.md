@@ -4,7 +4,7 @@ ConwayTree: Life in 3d
 ConwayTree is my attempt to examine the forms and propeties of 3D structures formed by Conway's Life (with time as the third axis).
 I used [Minecraft-clone from Michael Fogleman](https://github.com/fogleman/Minecraft) as the environment for experiments.
 
-You can find less technical description on [the ConwayTree project's page](http://altsoph.com/projects/conwaytree/) and some related videos on [my special youtube playlist](http://www.youtube.com/playlist?list=PLDpCMqzwZGlFhCfQLzHNfDwCJQiTHibeU).
+You can find the more general description on [the ConwayTree project's page](http://altsoph.com/projects/conwaytree/) and some related videos on [my special youtube playlist](http://www.youtube.com/playlist?list=PLDpCMqzwZGlFhCfQLzHNfDwCJQiTHibeU).
 
 How to install
 --------------
