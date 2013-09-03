@@ -36,24 +36,24 @@ python conway_tree.py patterns/cow.cells
 
 Controls
 --------
-* use `mouse`    to look around
-* `I`            to invert the mouse Y-axis
-* `ESC`          to unlock the mouse cursor
+* use `mouse` to look around
+* `I` to invert the mouse Y-axis
+* `ESC` to unlock the mouse cursor
+
+
+* `WASD` to move around
+* `TAB` to turn fly mode on/off (default=on)
+* `SPACE` to jump (while not flying)
+* `Q` and `E` to strafe vertically (while flying)
   
 
-* `WASD`         to move around
-* `TAB`          to turn fly mode on/off (default=on)
-* `SPACE`        to jump (while not flying)
-* `Q` and `E`      to strafe vertically (while flying)
+* `ENTER` or `Z` to count the next Life generation
+* `X` to start/stop Life autogeneration
   
 
-* `ENTER` or `Z`   to count the next Life generation
-* `X`            to start/stop Life autogeneration
-  
-
-* `R`            sometimes it's helpful against glitches
-* `L`            to show/hide the statistics bar
-* `H`            to display/hide this information
+* `R` sometimes it's helpful against glitches
+* `L` to show/hide the statistics bar
+* `H` to display/hide this information
 
 Pattern file format
 -------------------
@@ -77,7 +77,7 @@ However, the way of movie assembling from saved frames stays up to your preferen
 ### Texture altering
 
 Two default sets provided with code and one of them demonstrates the transparency trick.
-Just replace `texture.png` file by `texture.png_transparent` file to take a look on it.
+Just replace the `texture.png` file by the `texture.png_transparent` file to take a look on it.
 You can also play and change the textures file by yourself.
 
 
