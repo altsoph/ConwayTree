@@ -40,13 +40,16 @@ Controls
 * `I`            to invert the mouse Y-axis
 * `ESC`          to unlock the mouse cursor
 
+
 * `WASD`         to move around
 * `TAB`          to turn fly mode on/off (default=on)
 * `SPACE`        to jump (while not flying)
 * `Q` and `E`      to strafe vertically (while flying)
 
+
 * `ENTER` or `Z`   to count the next Life generation
 * `X`            to start/stop Life autogeneration
+
 
 * `R`            sometimes it's helpful against glitches
 * `L`            to show/hide the statistics bar
