@@ -4,7 +4,7 @@ ConwayTree: Life in 3d
 ConwayTree is my attempt to examine the forms and propeties of 3D structures formed by Conway's Life (with time as the third axis).
 I used [Minecraft-clone from Michael Fogleman](https://github.com/fogleman/Minecraft) as the environment for experiments.
 
-You can find less technical description on [the ConwayTree project's page](http://altsoph.com/projects/conwaytree/) and some related videos on [the special youtube playlist](http://www.youtube.com/playlist?list=PLDpCMqzwZGlFhCfQLzHNfDwCJQiTHibeU).
+You can find less technical description on [the ConwayTree project's page](http://altsoph.com/projects/conwaytree/) and some related videos on [my special youtube playlist](http://www.youtube.com/playlist?list=PLDpCMqzwZGlFhCfQLzHNfDwCJQiTHibeU).
 
 How to install
 --------------
@@ -18,14 +18,16 @@ If you miss it, try to install it using the following command:
 pip install pyglet
 ```
 
-**Note:** _Some 64 bits Mac users may experience problems with the default pyglet package installed. The known solution for such situation is:
-* Download the latest snapshot of [pyglet sources](https://code.google.com/p/pyglet) (right now the latest version is 1.2alpha)
-* Build and install it according [the official instructions](http://www.pyglet.org/doc/programming_guide/installing_using_setup_py.html)_
+**Note:** Some 64 bits Mac users may experience problems with the default pyglet package installed. The known solution for such situation is:
+* Download the latest snapshot of [the  pyglet sources](https://code.google.com/p/pyglet) (right now the latest version is 1.2alpha)
+* Build and install it according [the official instructions](http://www.pyglet.org/doc/programming_guide/installing_using_setup_py.html)
 
 How to run
 -----------
 
-The simplest way to run ConwayTree is to issue `python conway_tree.py` command. This will bring up a ConwayTree instance with the standart R-pentomino pattern as seed. _Check 'Controls' section below to realize control keys and abilities; or just push 'H' after the launch_.
+The simplest way to run ConwayTree is to issue `python conway_tree.py` command. 
+This will bring up a ConwayTree instance with the standart R-pentomino pattern as seed. 
+_Check 'Controls' section below to realize control keys and abilities; or just push 'H' after the launch_.
 
 However, you can give the filename as a run parameter for specifying the seed pattern:
 ```shell
@@ -34,27 +36,27 @@ python conway_tree.py patterns/cow.cells
 
 Controls
 --------
-> <mouse>      to look around
-> I            to invert the mouse Y-axis
-> ESC          to unlock the mouse cursor
+  use mouse    to look around  
+  I            to invert the mouse Y-axis  
+  ESC          to unlock the mouse cursor  
 
-> WASD         to move around
-> TAB          to turn fly mode on/off (default=on)
-> SPACE        to jump (while not flying)
-> Q and E      to strafe vertically (while flying)
+  WASD         to move around  
+  TAB          to turn fly mode on/off (default=on)  
+  SPACE        to jump (while not flying)  
+  Q and E      to strafe vertically (while flying)  
 
-> ENTER or Z   to count the next Life generation
-> X            to start/stop Life autogeneration
+  ENTER or Z   to count the next Life generation  
+  X            to start/stop Life autogeneration  
 
-> R            sometimes it's helpful against glitches
-> L            to show/hide the statistics bar
-> H            to display/hide this information
+  R            sometimes it's helpful against glitches  
+  L            to show/hide the statistics bar  
+  H            to display/hide this information  
 
 Pattern file format
 -------------------
 The current version of ConwayTree supports only the basic ascii-format for specifying seed patterns.
 Rules of this format are:
-* <space> or . (<dot>) means a 'dead' (or absent) cell
+* the space-symbol or `.` (dot) means a dead (or absent) cell
 * any other symbol means an alive one
 * the right alignment of a pattern isn't necessary
 
@@ -67,7 +69,7 @@ The frame saving mode could be activated using the special run parameter `save_f
 In the frame saving mode ConwayTree creates (if necessary) folder `frames` and saves there each frame it produces during the run, one by one.
 This mode was made especially for making video movies of envolving Life structures.
 
-However, the way of movie assembling from saved frames stays up to your preferences. As for me, under Windows I used the [rtJPG2Video](http://orbisvitae.com/software/rtjpg2video/) utility.
+However, the way of movie assembling from saved frames stays up to your preferences. As for me, I used the [rtJPG2Video](http://orbisvitae.com/software/rtjpg2video/) utility under Windows OS.
 
 ### Texture altering
 
@@ -83,7 +85,7 @@ Known troubles
 
 Credits
 -------
-* John Conway for the Life game
+* [John Conway](http://en.wikipedia.org/wiki/John_Horton_Conway) for the game of Life
 * Michael Fogleman for the [Minecraft-clone code](https://github.com/fogleman/Minecraft)
 * [zarazum@](https://twitter.com/zarazum) as a co-thinker and beta-tester
-* [Conwaylife.com portal] for the collection of Life patterns
+* [Conwaylife.com portal](http://www.conwaylife.com/) for a huge collection of Life patterns
