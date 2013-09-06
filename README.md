@@ -1,7 +1,7 @@
 ConwayTree: Life in 3d
 ======================
 
-ConwayTree is my attempt to examine the forms and propeties of 3D structures formed by Conway's Life (with time as the third axis).
+ConwayTree is my attempt to examine the forms and properties of 3D structures formed by Conway's Life (with time as the third axis).
 I used [Minecraft-clone from Michael Fogleman](https://github.com/fogleman/Minecraft) as the environment for experiments.
 
 You can find the more general description on [the ConwayTree project's page](http://altsoph.com/projects/conwaytree/) and some related videos on [my special youtube playlist](http://www.youtube.com/playlist?list=PLDpCMqzwZGlFhCfQLzHNfDwCJQiTHibeU).
@@ -26,7 +26,7 @@ How to run
 -----------
 
 The simplest way to run ConwayTree is to issue `python conway_tree.py` command. 
-This will bring up a ConwayTree instance with the standart R-pentomino pattern as seed. 
+This will bring up a ConwayTree instance with the standard R-pentomino pattern as seed. 
 _Check 'Controls' section below to realize control keys and abilities; or just push 'H' after the launch_.
 
 However, you can give the filename as a run parameter for specifying the seed pattern:
