@@ -27,7 +27,7 @@ sudo python setup.py install
 Use
 ---
 
-The simplest way to try ConwayTree is to type `python conway_tree.py` command in your favorite console. This will bring up a ConwayTree instance with famous [R-pentomino](http://www.conwaylife.com/wiki/R-pentomino) pattern as seed (generation zero pattern laying on the ground level of visible 3D environment). 
+The simplest way to try ConwayTree is to type `python conway_tree.py` command in your favorite console. This will bring up a ConwayTree instance with famous [R-pentomino](http://www.conwaylife.com/wiki/R-pentomino) pattern as a seed (generation zero pattern laying on the ground level of visible 3D environment). 
 
 Hit `H` key to get help on controls.
 
@@ -63,9 +63,9 @@ XX
 .X
 ```
 
-Hacking
--------
-### Recording video
+Some hacks
+----------
+### Video recording
 The frame saving mode could be activated using the special run parameter `save_frames` (it must be the last parameter in any case). In the frame saving mode ConwayTree creates (if necessary) folder `frames` and saves each frame it produces during the run, one by one. This mode was made especially for making video movies of evolving Life structures.
 
 However, assembling the movie from separate frames is up to you. As for me, I used the [rtJPG2Video](http://orbisvitae.com/software/rtjpg2video/) utility under Windows OS. On Mac and Linux you can try [ffmpeg](http://ffmpeg.org/) or MEncoder (part of [MPlayer project](http://www.mplayerhq.hu/design7/dload.html)). 
@@ -76,7 +76,7 @@ Two default sets provided with code, and one of them demonstrates the transparen
 Known troubles
 --------------
 * Some troubles are known on Mac with the default version of the pyglet library -- check the 'Installation' section for the solution.
-* Some visual glitches are possible with visualization of huge structures with zillions of cells. The reason is in the original Michael Fogleman's queue processing routine -- it rejects tail of queue whenever the desired FPS is lost. If you really need to make glitch-free rendering (for movie capturing, for example), you could find the `self.model.process_queue()` call placed in the `Window.update()` method and replace it by `self.model.process_entire_queue()`. This will give you the glitch-free but very creeping version.
+* Some glitches are possible with visualization of huge structures with a huge number of cells. The reason is in the original Michael Fogleman's queue processing routine -- it rejects tail of queue whenever the desired FPS is lost. If you really need to make glitch-free rendering (for movie capturing, for example), you could find the `self.model.process_queue()` call placed in the `Window.update()` method and replace it by `self.model.process_entire_queue()`. This will give you the glitch-free but very creeping version.
 
 Credits
 -------
