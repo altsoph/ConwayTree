@@ -1,14 +1,15 @@
 ConwayTree: Life in 3D
 ======================
 
-ConwayTree is an attempt to explore 3D structures formed by generations of Conway's Life cellular automaton (with time as the third axis). I used [the Minecraft clone from Michael Fogleman](https://github.com/fogleman/Minecraft) as 3D engine.
+ConwayTree is an attempt to explore 3D structures formed by generations of Conway's Life cellular automaton (with time as the third axis). I used [the Minecraft clone by Michael Fogleman](https://github.com/fogleman/Minecraft) as 3D engine.
 
-You can find the general description on [the ConwayTree project's page](http://altsoph.com/projects/conwaytree/) and some related videos on [my special youtube playlist](http://www.youtube.com/playlist?list=PLDpCMqzwZGlFhCfQLzHNfDwCJQiTHibeU).
+You can find the general description on [the ConwayTree project's page](http://altsoph.com/projects/conwaytree/) and some related videos on [my ConwayTree youtube playlist](http://www.youtube.com/playlist?list=PLDpCMqzwZGlFhCfQLzHNfDwCJQiTHibeU).
 
 Installation
 ------------
 
-First of all, make sure you have the latest 2.x python installed. Then clone (or download) [this repository](https://github.com/altsoph/ConwayTree) and try to run the script. The script requires [pyglet](https://code.google.com/p/pyglet) multimedia library. If you miss it, try to install it using the following command:
+First of all, make sure you have the latest 2.x python installed. Then clone (or download) [this repository](https://github.com/altsoph/ConwayTree) and try to run the script. The script requires [pyglet](https://code.google.com/p/pyglet) multimedia library. If it is missing on your computer, try to install it with the following command:
+
 
 ```shell
 pip install pyglet
@@ -46,7 +47,7 @@ Controls
 * `X` to run/pause automatic computing of Life generations
 * `R` sometimes is helpful against visual glitches
 * `L` to show/hide the statistics bar
-* `H` to show/hide this information
+* `H` to show/hide the information about control keys
 
 Pattern file format
 -------------------
@@ -67,16 +68,16 @@ Some hacks
 ----------
 ### Video recording
 The frame saving mode could be activated using the special run parameter `save_frames` (it must be the last parameter in any case). In the frame saving mode ConwayTree creates (if necessary) folder `frames` and saves each frame it produces during the run, one by one. This mode was made especially for making video movies of evolving Life structures.
-
-However, assembling the movie from separate frames is up to you. As for me, I used the [rtJPG2Video](http://orbisvitae.com/software/rtjpg2video/) utility under Windows OS. On Mac and Linux you can try [ffmpeg](http://ffmpeg.org/) or MEncoder (part of [MPlayer project](http://www.mplayerhq.hu/design7/dload.html)). 
+Each frame file uses the JPG format and has a name like "frame_XXXXXXXX.jpg", where XXXXXXXX is the number of the given frame. However, assembling the movie from separate frames is up to you. As for me, I used the [rtJPG2Video](http://orbisvitae.com/software/rtjpg2video/) utility under Windows OS. On Mac and Linux you can try [ffmpeg](http://ffmpeg.org/) or MEncoder (part of [MPlayer project](http://www.mplayerhq.hu/design7/dload.html)). 
 
 ### Texture alteration
-Two default sets provided with code, and one of them demonstrates the transparency trick. Just replace the `texture.png` file by the `texture.png_transparent` file to take a look on it. You can also play and change the textures file by yourself.
+By default, the blocks forming the Conway Life tree are covered with one of the two prepackaged textures. 
+`texture.png` is the solid one, while `texture.png_transparent` demonstrates the transparency trick. Just replace the `texture.png` with the `texture.png_transparent` file to take a look on it. You can also play and change the file with textures by yourself.
 
 Known troubles
 --------------
 * Some troubles are known on Mac with the default version of the pyglet library -- check the 'Installation' section for the solution.
-* Some glitches are possible with visualization of huge structures with a huge number of cells. The reason is in the original Michael Fogleman's queue processing routine -- it rejects tail of queue whenever the desired FPS is lost. If you really need to make glitch-free rendering (for movie capturing, for example), you could find the `self.model.process_queue()` call placed in the `Window.update()` method and replace it by `self.model.process_entire_queue()`. This will give you the glitch-free but very creeping version.
+* Some glitches are possible while visualizing huge structures with many living cells. The reason for that is the way the original Michael Fogleman's queue processing routine works: it rejects tail of queue whenever the desired FPS is lost. If you really need glitch-free rendering (for movie capturing, for example), you could replace the `self.model.process_queue()` in the `Window.update()` method with `self.model.process_entire_queue()`. It should remove the glitches, at a cost of significant slow-down.
 
 Credits
 -------
