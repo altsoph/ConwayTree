@@ -68,7 +68,9 @@ Some hacks
 ----------
 ### Video recording
 The frame saving mode could be activated using the special run parameter `save_frames` (it must be the last parameter in any case). In the frame saving mode ConwayTree creates (if necessary) folder `frames` and saves each frame it produces during the run, one by one. This mode was made especially for making video movies of evolving Life structures.
-Each frame file uses the JPG format and has a name like "frame_XXXXXXXX.jpg", where XXXXXXXX is the number of the given frame. However, assembling the movie from separate frames is up to you. As for me, I used the [rtJPG2Video](http://orbisvitae.com/software/rtjpg2video/) utility under Windows OS. On Mac and Linux you can try [ffmpeg](http://ffmpeg.org/) or MEncoder (part of [MPlayer project](http://www.mplayerhq.hu/design7/dload.html)). 
+Each frame file uses the JPG format and has a name like "frame_XXXXXXXX.jpg", where XXXXXXXX is the number of the given frame.
+
+However, assembling the movie from separate frames is up to you. As for me, I used the [rtJPG2Video](http://orbisvitae.com/software/rtjpg2video/) utility under Windows OS. On Mac and Linux you can try [ffmpeg](http://ffmpeg.org/) or MEncoder (part of [MPlayer project](http://www.mplayerhq.hu/design7/dload.html)). 
 
 ### Texture alteration
 By default, the blocks forming the Conway Life tree are covered with one of the two prepackaged textures. 
